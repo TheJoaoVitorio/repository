@@ -1,0 +1,69 @@
+/* Atualize o CSS do header para incluir os efeitos desejados */
+.header {
+    
+    width: 100%; /* Faz o header ocupar toda a largura da tela */
+    height: 18vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     /* Garante que o header fique sobre outros elementos */
+}
+
+.headerFixed{
+    position: fixed; /* Fixa o header no topo da página */
+    top: 0; /* Define a posição do topo */
+    background: rgba(15, 16, 16, 0.8); /* Fundo com cor semi-transparente */
+    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
+    z-index: 1000;  
+}
+
+/* Mantém os estilos anteriores */
+.headerContent {
+    background-color: #0F1010;
+    border-radius: 6px;
+    width: 70%;
+    padding: 25px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* box-shadow: rgb(22, 22, 22) 0px 6px 24px 0px, rgba(28, 28, 28, 0.892) 0px 0px 0px 1px; */
+}
+
+.header .scrolled {
+    background: rgba(15, 16, 16, 1); /* Fundo totalmente opaco */
+    backdrop-filter: none; /* Remove o desfoque quando rolado */
+}
+
+.headerIcons {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    gap: 20px;
+}
+
+.headerTextColor {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.text1Em {
+    font-size: 1em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1.5px;
+}
+
+.icon {
+    width: 28px;
+    height: 28px;
+    padding: 6px 5px 3px 4px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.icon:hover {
+    border-radius: 6px;
+    color: aliceblue;
+    background: rgba(34, 34, 34, 1);
+}
