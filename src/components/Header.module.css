@@ -26,12 +26,13 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    /* box-shadow: rgb(22, 22, 22) 0px 6px 24px 0px, rgba(28, 28, 28, 0.892) 0px 0px 0px 1px; */
+    
 }
 
-.header .scrolled {
-    background: rgba(15, 16, 16, 1); /* Fundo totalmente opaco */
-    backdrop-filter: none; /* Remove o desfoque quando rolado */
+.scrolled {
+    background: rgba(15, 16, 16, 0.8); /* Fundo com cor semi-transparente */
+    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
+    box-shadow: rgb(22, 22, 22) 0px 6px 24px 0px, rgba(28, 28, 28, 0.892) 0px 0px 0px 1px;
 }
 
 .headerIcons {

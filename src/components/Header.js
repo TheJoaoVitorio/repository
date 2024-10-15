@@ -5,11 +5,13 @@ import { FaLinkedin, FaEnvelope } from 'react-icons/fa';
 export default function Header() {
     useEffect(() => {
         const handleScroll = () => {
-            const header = document.querySelector(`.${styles.header}`);
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
+            const header = document.querySelector(`.${styles.headerContent}`);
+            if (window.scrollY > 20) {
+                header.classList.add(styles.headerFixed);
+                header.classList.add(styles.scrolled);
             } else {
-                header.classList.remove('scrolled');
+                header.classList.remove(styles.headerFixed);
+                header.classList.remove(styles.scrolled);
             }
         };
 
