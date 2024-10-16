@@ -5,6 +5,14 @@
     width: 70%;
 }
 
+.CardSectionHeaderText{
+    /* border: 2px solid red; */
+    text-align: center;
+    color: aliceblue;
+    font-size: 18px;
+    margin-bottom: 32px;
+}
+
 .CardSectionContent{
     /* border: 2px solid greenyellow; */
     width: 100%;
@@ -21,5 +29,5 @@
 
 .CardSectionCollumnRight{
     /* border: 2px solid cyan; */
-    padding-top: 80px;
+    padding-top: 90px;
 }
