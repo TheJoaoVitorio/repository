@@ -1,8 +1,9 @@
-// import logo from './logo.svg';
+import './App.css';
 import Header from './components/Header';
 import MainContent from './components/Main';
-import './App.css';
+import CardSection from './components/CardSection';
 import CardMain from './components/CardMain';
+
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header></Header>
       <MainContent></MainContent>
       <CardMain></CardMain>
+      <CardSection></CardSection>
     </div>
   );
 }

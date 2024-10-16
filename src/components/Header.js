@@ -6,7 +6,7 @@ export default function Header() {
     useEffect(() => {
         const handleScroll = () => {
             const header = document.querySelector(`.${styles.headerContent}`);
-            if (window.scrollY > 20) {
+            if (window.scrollY > 40) {
                 header.classList.add(styles.headerFixed);
                 header.classList.add(styles.scrolled);
             } else {

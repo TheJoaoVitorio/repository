@@ -1,26 +1,24 @@
 /* Atualize o CSS do header para incluir os efeitos desejados */
 .header {
     
-    width: 100%; /* Faz o header ocupar toda a largura da tela */
+    width: 100%; 
     height: 18vh;
     display: flex;
     justify-content: center;
     align-items: center;
-     /* Garante que o header fique sobre outros elementos */
 }
 
 .headerFixed{
-    position: fixed; /* Fixa o header no topo da página */
-    top: 0; /* Define a posição do topo */
+    position: fixed; 
+    top: 14; 
     background: rgba(15, 16, 16, 0.8); /* Fundo com cor semi-transparente */
     backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
     z-index: 1000;  
 }
 
-/* Mantém os estilos anteriores */
 .headerContent {
     background-color: #0F1010;
-    border-radius: 6px;
+    border-radius: 60px;
     width: 70%;
     padding: 25px;
     margin: 0 auto;
