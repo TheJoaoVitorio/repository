@@ -7,8 +7,19 @@
 
 .CardSectionContent{
     border: 2px solid greenyellow;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    column-gap: 30px;
+}
+
+.CardSectionCollumnLeft{
+    /* border: 2px solid fuchsia; */
+}
+
+.CardSectionCollumnRight{
+    /* border: 2px solid cyan; */
+    padding-top: 80px;
 }

@@ -11,30 +11,35 @@
     background: rgba(15, 16, 16, 0.8); /* Fundo com cor semi-transparente */
     backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
     box-shadow: rgb(22, 22, 22) 0px 6px 24px 0px, rgba(28, 28, 28, 0.892) 0px 0px 0px 1px;
+    margin-bottom: 38px;
 }
 
 .CardItemPhoto{
     width: 80%;
     height: 60vh;
-    background: #041B8C;
-    background: linear-gradient(135deg, #041B8C, #87151E);
+    /* background: #041B8C; */
+    /* background: linear-gradient(135deg, #041B8C, #87151E); */
     border-radius: 25px;
     margin-top: 8px;
     --webkit-backdrop-filter: blur(20px) saturate(180%);
     border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 
-    0 10px 50px 20px rgba(4, 27, 140, 0.2),   /* Azul escuro mais espalhado */
-    0 20px 60px 30px rgba(135, 21, 30, 0.15), /* Vermelho escuro mais espalhado */
-    0 30px 70px 40px rgba(4, 27, 140, 0.1),   /* Azul escuro mais suave e espalhado */
-    0 40px 80px 50px rgba(135, 21, 30, 0.1),  /* Vermelho escuro mais suave e espalhado */
-    0 50px 90px 60px rgba(4, 27, 140, 0.08);
+    /* box-shadow: 
+    0 10px 50px 20px rgba(4, 27, 140, 0.2),   
+    0 20px 60px 30px rgba(135, 21, 30, 0.15), 
+    0 30px 70px 40px rgba(4, 27, 140, 0.1),   
+    0 40px 80px 50px rgba(135, 21, 30, 0.1),  
+    0 50px 90px 60px rgba(4, 27, 140, 0.08); */
     opacity: 0.5;
 
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 34px;
+    font-size: 48px;
+}
+
+.CardItemPhoto img{
+    width: 80px;
 }
 
 .CardItemContent{
@@ -62,4 +67,51 @@
     font-size: 12px;
     display: flex;
     align-items: center;
+}
+
+/* STYLE PARA O CARD DELPHI */
+.CardItemStyleDelphi{
+    background: #041B8C;
+    background: linear-gradient(135deg, #041B8C, #87151E); 
+    box-shadow: 
+    0 10px 50px 20px rgba(4, 27, 140, 0.2),   /* Azul escuro mais espalhado */
+    0 20px 60px 30px rgba(135, 21, 30, 0.15), /* Vermelho escuro mais espalhado */
+    0 30px 70px 40px rgba(4, 27, 140, 0.1),   /* Azul escuro mais suave e espalhado */
+    0 40px 80px 50px rgba(135, 21, 30, 0.1),  /* Vermelho escuro mais suave e espalhado */
+    0 50px 90px 60px rgba(4, 27, 140, 0.08);
+
+}
+
+/* STYLE PARA O CARD JAVASCRIPT */
+/* STYLE PARA O CARD JAVASCRIPT */
+.CardItemStyleJavascript {
+    background: linear-gradient(352deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 79%);
+    box-shadow:
+        0 10px 50px 20px rgba(34, 193, 195, 0.2),   /* Ciano mais espalhado */
+        0 20px 60px 30px rgba(253, 187, 45, 0.15),  /* Amarelo mais espalhado */
+        0 30px 70px 40px rgba(34, 193, 195, 0.1),   /* Ciano mais suave e espalhado */
+        0 40px 80px 50px rgba(253, 187, 45, 0.1),   /* Amarelo mais suave e espalhado */
+        0 50px 90px 60px rgba(34, 193, 195, 0.08);  /* Ciano ainda mais suave e espalhado */
+}
+
+/* STYLE PARA O CARD DJANGO */
+.CardItemStyleDjango {
+    background-image: linear-gradient(90deg, #03CB30FF 0%, #147ECDFF 100%);
+    box-shadow:
+        0 10px 50px 20px rgba(3, 203, 48, 0.2),    /* Verde mais espalhado */
+        0 20px 60px 30px rgba(20, 126, 205, 0.15), /* Azul mais espalhado */
+        0 30px 70px 40px rgba(3, 203, 48, 0.1),    /* Verde mais suave e espalhado */
+        0 40px 80px 50px rgba(20, 126, 205, 0.1),  /* Azul mais suave e espalhado */
+        0 50px 90px 60px rgba(3, 203, 48, 0.08);   /* Verde ainda mais suave e espalhado */
+}
+
+/* STYLE PARA O CARD PYTHON */
+.CardItemStylePython {
+    background-image: linear-gradient(to right, #721fef 0%, #0083f5 100%);
+    box-shadow:
+        0 10px 50px 20px rgba(114, 31, 239, 0.2),   /* Roxo mais espalhado */
+        0 20px 60px 30px rgba(0, 131, 245, 0.15),   /* Azul mais espalhado */
+        0 30px 70px 40px rgba(114, 31, 239, 0.1),   /* Roxo mais suave e espalhado */
+        0 40px 80px 50px rgba(0, 131, 245, 0.1),    /* Azul mais suave e espalhado */
+        0 50px 90px 60px rgba(114, 31, 239, 0.08);  /* Roxo ainda mais suave e espalhado */
 }

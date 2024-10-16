@@ -2,10 +2,10 @@
 import React from 'react'; // Adicione esta linha
 import styles from '../components/CardItem.module.css';
 
-export default function CardItem({ icon, textHeader, textLeft, textRight }) {
+export default function CardItem({ icon, styleItemPhoto , textHeader, textLeft, textRight }) {
     return (
-        <div className={styles.CardItem}>
-            <div className={styles.CardItemPhoto}>
+        <div className={`${styles.CardItem}`}>
+            <div className={`${styles.CardItemPhoto} ${styles[styleItemPhoto]}`}>
                 {/* Verifica se o ícone é um componente (função) */}
                 {typeof icon === 'function' ? (
                     // Renderiza o componente de ícone
