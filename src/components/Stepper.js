@@ -1,14 +1,13 @@
 import React from 'react';
-import { Figma, GitBranch } from 'lucide-react';
 import { SiDelphi, SiDbeaver, SiNotion } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { BiLogoPostgresql } from "react-icons/bi";
-import { FaPhoenixSquadron } from "react-icons/fa";
+import { FaPhoenixSquadron, FaGitAlt,FaFigma  } from "react-icons/fa";
 
 
 const tools = [
   {
-    icon: <Figma size={24} />,
+    icon: <FaFigma  size={24} />,
     name: "Figma",
     description: "Design de interface e prototipagem."
   },
@@ -18,7 +17,7 @@ const tools = [
     description: "Plataforma multifuncional para organização de projetos, gestão de tarefas e documentação colaborativa."
   },
   {
-    icon: <GitBranch size={24} />,
+    icon: <FaGitAlt size={24} />,
     name: "Git",
     description: "Controle de versão e colaboração."
   },
@@ -53,6 +52,10 @@ const tools = [
 const Stepper = () => {
   return (
     <div className='stepperContainer'>
+      <div className='stepperHeader' >
+          <h1>Ferramentas</h1>
+      </div>
+
       <div className="stepper">
         {tools.map((tool, index) => (
           <div key={index} className="stepper-item">
@@ -70,10 +73,18 @@ const Stepper = () => {
           width: 70%;
           margin: 0 auto;
           padding: 20px;
-        //   border: 2px solid red;
+          // border: 2px solid red;
           display:flex;
+          flex-direction:column;
           justify-content:center;
+          align-items:center;
           color: whitesmoke;
+        }
+        .stepperHeader{
+          // border: 2px solid red;
+          width: 300px;
+          text-align:center;
+          margin-bottom: 10px;
         }
         .stepper {
           display: flex;
@@ -81,6 +92,7 @@ const Stepper = () => {
           align-items: stretch;
           max-width: 100%;
           position: relative;
+          padding-top: 20px;
         }
         .stepper-item {
           display: flex;
