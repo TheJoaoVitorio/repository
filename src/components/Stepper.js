@@ -73,17 +73,15 @@ const Stepper = () => {
           width: 70%;
           margin: 0 auto;
           padding: 20px;
-          // border: 2px solid red;
-          display:flex;
-          flex-direction:column;
-          justify-content:center;
-          align-items:center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
           color: whitesmoke;
         }
-        .stepperHeader{
-          // border: 2px solid red;
+        .stepperHeader {
           width: 300px;
-          text-align:center;
+          text-align: center;
           margin-bottom: 10px;
         }
         .stepper {
@@ -110,10 +108,17 @@ const Stepper = () => {
           border-radius: 50%;
           color: #3b82f6;
           z-index: 2;
-          background: rgba(15, 16, 16, 0.8); /* Fundo com cor semi-transparente */
-          backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
+          background: rgba(15, 16, 16, 0.8);
+          backdrop-filter: blur(10px);
           box-shadow: rgb(22, 22, 22) 0px 6px 24px 0px, rgba(28, 28, 28, 0.892) 0px 0px 0px 1px;
-          
+          transition: transform 0.3s ease-in-out; /* Transição suave para o zoom */
+        }
+        .stepper-icon:hover {
+          transform: scale(1.2); /* Efeito de zoom */
+        }
+        .stepper-icon:hover svg {
+          transform: rotate(360deg); /* Rotação do ícone */
+          transition: transform 0.3s ease-in-out; /* Transição suave para a rotação */
         }
         .stepper-content {
           margin-left: 20px;
@@ -147,8 +152,8 @@ const Stepper = () => {
         .stepper-item:last-child .stepper-line {
           display: none;
         }
-        @media (min-width:700px){
-            .stepper-content p{
+        @media (min-width:700px) {
+            .stepper-content p {
                 width: 300px;
             }
         }
