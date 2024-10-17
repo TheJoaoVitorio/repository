@@ -81,6 +81,7 @@ const Stepper = () => {
         }
         .stepperHeader {
           width: 300px;
+          font-size: 20px;
           text-align: center;
           margin-bottom: 10px;
         }
@@ -152,6 +153,7 @@ const Stepper = () => {
         .stepper-item:last-child .stepper-line {
           display: none;
         }
+
         @media (min-width:700px) {
             .stepper-content p {
                 width: 300px;
