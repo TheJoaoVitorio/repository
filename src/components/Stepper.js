@@ -1,6 +1,6 @@
 import React from 'react';
 import { Figma, GitBranch } from 'lucide-react';
-import { SiDelphi, SiDbeaver } from "react-icons/si";
+import { SiDelphi, SiDbeaver, SiNotion } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FaPhoenixSquadron } from "react-icons/fa";
@@ -13,6 +13,11 @@ const tools = [
     description: "Design de interface e prototipagem."
   },
   {
+    icon: <SiNotion size={24} />,
+    name: "Notion",
+    description: "Plataforma multifuncional para organização de projetos, gestão de tarefas e documentação colaborativa."
+  },
+  {
     icon: <GitBranch size={24} />,
     name: "Git",
     description: "Controle de versão e colaboração."
@@ -20,7 +25,7 @@ const tools = [
   {
     icon: <SiDelphi size={24} />,
     name: "Delphi 11.3",
-    description: "IDE para desenvolvimento rápido de aplicativos nativos multiplataforma, especializada em Windows e com suporte estendido para mobile, web e nuvem."
+    description: "IDE para desenvolvimento rápido de aplicativos nativos multiplataforma, especializada em Windows e com suporte estendido para mobile."
   },
   {
     icon: <VscVscode size={24} />,
