@@ -1,4 +1,4 @@
-import stylesCard from '../components/Card.module.css';
+//import stylesCard from '../components/Card.module.css';
 import styles from '../components/CardSection.module.css';
 import CardItem from './CardItem';
 import { FaPython } from 'react-icons/fa';
