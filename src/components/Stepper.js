@@ -92,6 +92,9 @@ const Stepper = () => {
           max-width: 100%;
           position: relative;
           padding-top: 20px;
+          animation: appear linear;
+          animation-timeline : view();
+          animation-range:entry 0;
         }
         .stepper-item {
           display: flex;
@@ -153,6 +156,22 @@ const Stepper = () => {
         .stepper-item:last-child .stepper-line {
           display: none;
         }
+
+        @keyframes appear{
+            from{
+                    opacity :0;
+                    scale: 0.8;
+            } to {
+                    opacity:1;
+                    scale:1;
+            }
+        }
+
+        /* .block{
+            animation: appear linear;
+            animation-timeline : view();
+            animation-range:entry 0;
+        } */
 
         @media (min-width:700px) {
             .stepper-content p {
