@@ -8,6 +8,7 @@ import gifMobileProjeto2 from '../gifProjects/day_519.png';
 import React, { useState, useEffect } from 'react';
 import { IoChevronBackOutline } from "react-icons/io5";
 import { IoChevronForwardOutline } from "react-icons/io5";
+import { FaEye } from "react-icons/fa";
 import 'animate.css/animate.min.css'; 
 
 const projects = [
@@ -77,6 +78,7 @@ export default function Card() {
                     ) : (
                         <img className={styles.GifMobile} src={currentProject.gifMobile} alt={currentProject.title} />
                     )}
+                    <div className={styles.OverlayText}> <FaEye/> Ver mais</div>
                 </div>
                 <button className={styles.NextProject} onClick={handleNextProject}>
                     <IoChevronForwardOutline />
