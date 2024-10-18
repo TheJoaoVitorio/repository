@@ -53,6 +53,9 @@ export default function SectionAboutMe(){
                     padding:40px 0;
                     color: whitesmoke;
                 }
+                .SectionAboutMeHeader{
+                    font-size:20px;
+                }
                 .SectionAboutMeContent{
                     //width:70%;
                     // border: 3px solid cyan;
