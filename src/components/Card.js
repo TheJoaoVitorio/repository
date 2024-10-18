@@ -6,6 +6,7 @@ import gifDesktopProjeto2 from '../gifProjects/day_519.png';
 import gifMobileProjeto2 from '../gifProjects/day_519.png';
 
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { IoChevronBackOutline } from "react-icons/io5";
 import { IoChevronForwardOutline } from "react-icons/io5";
 import { FaEye } from "react-icons/fa";
@@ -32,6 +33,7 @@ export default function Card() {
         height: window.innerHeight,
     });
     const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const handleResize = () => {
@@ -59,6 +61,10 @@ export default function Card() {
         );
     };
 
+    const handleProjectClick = () => {
+        navigate(`/projetos/${currentProject.id}`);
+    };
+
     const currentProject = projects[currentProjectIndex];
 
     return (
@@ -72,7 +78,7 @@ export default function Card() {
                 <button className={styles.BackProject} onClick={handlePreviousProject}>
                     <IoChevronBackOutline />
                 </button>
-                <div className={styles.CardContent}>
+                <div className={styles.CardContent} onClick={handleProjectClick} >
                     {windowSize.width > 768 ? (
                         <img className={styles.GifDesktop} src={currentProject.gifDesktop} alt={currentProject.title} />
                     ) : (

@@ -2,22 +2,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React from 'react';
 import './App.css';
 import Header from './components/Header';
-// import MainContent from './components/Main';
-// import CardSection from './components/CardSection';
-// import CardMain from './components/CardMain';
-// import SectionAboutMe from './components/SectionAboutMe';
-// import VerticalStepper from './components/Stepper';
 import Home from './pages/Home';
+import ProjectDetails from './pages/ProjectDetails';
 
-
-// function App() {
-//   return (
-//       <div className="App">
-//         <Header></Header>
-//       </div>
-
-//   );
-// }
 
  function App() {
    return (
@@ -27,7 +14,8 @@ import Home from './pages/Home';
        </div>
 
           <Routes>
-            <Route path='/' element={<Home />} ></Route>            
+            <Route path='/' element={<Home />} ></Route> 
+            <Route path="/projetos/:id" element={<ProjectDetails />} />           
           </Routes>
      </Router>
    );
