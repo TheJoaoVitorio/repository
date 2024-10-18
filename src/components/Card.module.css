@@ -67,15 +67,17 @@
     justify-content: center;
     align-items: center;
     border: none;
-    background: rgba(15, 16, 16, 0.8); /* Fundo com cor semi-transparente */
-    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
+    background: rgba(15, 16, 16, 0.8); 
+    backdrop-filter: blur(10px); 
     box-shadow: rgb(22, 22, 22) 0px 6px 24px 0px, rgba(28, 28, 28, 0.892) 0px 0px 0px 1px;
     color: aliceblue;
 }
-/* 
-.BackProject > svg{
-    
-} */
+.BackProject:hover{
+    background: rgba(15, 16, 16, 0.9);
+    transform: scale(1.1); 
+    box-shadow: rgb(22, 22, 22) 0px 10px 30px 0px, rgba(28, 28, 28, 0.9) 0px 0px 0px 1px;
+    color: white; 
+}
 
 .NextProject{
     z-index: 999;
@@ -88,10 +90,17 @@
     justify-content: center;
     align-items: center;
     border: none;
-    background: rgba(15, 16, 16, 0.8); /* Fundo com cor semi-transparente */
-    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
+    background: rgba(15, 16, 16, 0.8); 
+    backdrop-filter: blur(10px);
     box-shadow: rgb(22, 22, 22) 0px 6px 24px 0px, rgba(28, 28, 28, 0.892) 0px 0px 0px 1px;
     color: aliceblue;
+}
+
+.NextProject:hover {
+    background: rgba(15, 16, 16, 0.9);
+    transform: scale(1.1); 
+    box-shadow: rgb(22, 22, 22) 0px 10px 30px 0px, rgba(28, 28, 28, 0.9) 0px 0px 0px 1px;
+    color: white; 
 }
 
 

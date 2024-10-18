@@ -1,4 +1,4 @@
-// import { ChakraProvider, Container } from '@chakra-ui/react';
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React from 'react';
 import './App.css';
 import Header from './components/Header';
@@ -9,17 +9,22 @@ import SectionAboutMe from './components/SectionAboutMe';
 import VerticalStepper from './components/Stepper';
 
 
-
 function App() {
   return (
-    <div className="App">
-      <Header></Header>
-      <MainContent></MainContent>
-      <CardMain></CardMain>
-      <CardSection></CardSection>
-      <SectionAboutMe></SectionAboutMe>
-      <VerticalStepper />
-    </div>
+    //<Router>
+      <div className="App">
+        <Header></Header>
+        <MainContent></MainContent>
+        <CardMain></CardMain>
+        <CardSection></CardSection>
+        <SectionAboutMe></SectionAboutMe>
+        <VerticalStepper />
+{/* 
+        <Routes>
+          <Route path="/wln"  />
+        </Routes> */}
+      </div>
+    //</Router>
   );
 }
 
