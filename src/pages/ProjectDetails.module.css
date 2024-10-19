@@ -83,6 +83,10 @@
 .iconStyle {
     font-size: 14px; /* Tamanho do ícone */
 }
+.iconLike:hover{
+    color: #3b82f6;
+    cursor: pointer;
+}
 
 .badgeStyleDjango{
     border-radius: 50px;

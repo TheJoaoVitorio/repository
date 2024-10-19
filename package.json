@@ -10,6 +10,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
+    "axios": "^1.7.7",
     "framer-motion": "^11.11.9",
     "lottie-react": "^2.4.0",
     "lucide": "^0.453.0",
@@ -23,6 +24,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "backend": "node ./src/backend/server.js",
+    "dev": "concurrently \"npm start\" \"npm run backend\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -44,5 +47,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "proxy": "http://localhost:5000", 
+  "devDependencies": {
+    "concurrently": "^9.0.1"
   }
 }
