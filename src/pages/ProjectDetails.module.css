@@ -47,7 +47,8 @@
     border-radius: 50px;
     justify-content: space-between;
     align-items: center;
-    width: 300px;
+    /* width: 300px; */
+    gap: 10px;
     color: rgba(255, 255, 255, 0.3);
 }
 .sectionDetailsApresentationReactions{

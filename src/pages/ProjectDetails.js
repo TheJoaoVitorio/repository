@@ -23,7 +23,8 @@ const projects = [
             'JavaScript': {
                 icon: BiLogoJavascript,
                 style: 'styleJavascript'
-            }
+            },
+            
         }
     },
     {
@@ -64,7 +65,7 @@ export default function ProjectDetails() {
                             <IoHeart /> 10
                         </div>
                         <div className={styles.sectionDetailsApresentationViews}>
-                            <FaEye /> 50
+                            <FaEye /> 500
                         </div>
                     </div>
                 </div>
