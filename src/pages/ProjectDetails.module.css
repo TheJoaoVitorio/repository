@@ -1,0 +1,117 @@
+.ProjectDetailsContainer{
+    /* border: 2px solid red; */
+    margin: 0 auto;
+    width: 70%;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.ProjectDetailsContainer h1{
+    color: whitesmoke;
+}
+
+.ProjectDetailsContainer p{
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.ProjectDetailsImageApresentation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ProjectDetailsImageApresentation img{
+    width: 90%;
+    background: rgba(15, 16, 16, 0.8); /* Fundo com cor semi-transparente */
+    backdrop-filter: blur(10px);
+    box-shadow: rgb(22, 22, 22) 0px 6px 24px 0px, rgba(28, 28, 28, 0.892) 0px 0px 0px 1px;
+    border-radius: 60px;
+    padding: 16px;
+    opacity: 0.7;
+}
+
+.sectionDetailsApresentation{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+}
+
+.sectionDetailsApresentationContent{
+    background: rgba(15, 16, 16, 0.8); /* Fundo com cor semi-transparente */
+    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
+    box-shadow: rgb(22, 22, 22) 0px 6px 24px 0px, rgba(28, 28, 28, 0.892) 0px 0px 0px 1px;
+    display: flex;
+    padding: 12px;
+    border-radius: 50px;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    color: rgba(255, 255, 255, 0.3);
+}
+.sectionDetailsApresentationReactions{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.sectionDetailsApresentationLikes,.sectionDetailsApresentationViews{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.sectionDetailsApresentationLikes svg, .sectionDetailsApresentationViews svg{
+    font-size: 22px;
+}
+.badgesContainer {
+    display: flex;
+    gap: 8px; /* Espaçamento entre os badges */
+    flex-wrap: wrap; /* Permitir que os badges quebrem linha se necessário */
+    justify-content: center; /* Centralizar os badges */
+    align-items: center;
+}
+
+
+.badgeDetailsLanguages{
+    /* border: 2px solid red; */
+    font-size: 14px;
+}
+.iconStyle {
+    font-size: 14px; /* Tamanho do ícone */
+}
+
+.badgeStyleDjango{
+    border-radius: 50px;
+    background-color: #316b58;
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 600;
+    color: #0f1715;
+    padding: 4px; 
+    display: flex;
+    align-items: center;
+}
+
+.styleJavascript {
+    border-radius: 50px;
+    background-color: #f0db4f;
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 600;
+    color: #323330;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+}
+
+/* Responsividade para telas menores (mobile) */
+@media (max-width: 768px) {
+    .badgeDetailsLanguages {
+        font-size: 0; /* Ocultar o texto */
+    }
+
+    .badgeDetailsLanguages .iconStyle {
+        font-size: 24px; /* Aumentar o tamanho do ícone para destacá-lo */
+    }
+}
