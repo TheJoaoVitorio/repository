@@ -150,14 +150,14 @@
 }
 
 .sectionAboutProjectTextContainer{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
     justify-content: center;
     height: 100%;
 }
 
 .sectionAboutProjectTextContent{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 100%;
 }
 

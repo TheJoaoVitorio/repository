@@ -46,9 +46,9 @@ const projects = [
         }
       },
       features: [
-        { name: 'Autenticação de Usuário', description: 'O sistema possui autenticação de usuários para segurança.', icon: FaUserLock },
-        { name: 'Gerar Tabelas Nutricionais', description: 'Permite a criação e edição de receitas e suas tabelas nutricionais.', icon: FaUtensils },
-        { name: 'Gerenciamento de Ingredientes', description: 'Criar, editar e apagar ingredientes para as receitas.', icon: FaClipboardList },
+        { name: 'Autenticação de Usuário', description: 'O sistema possui autenticação de usuários.', icon: FaUserLock },
+        { name: 'Gerar Tabelas Nutricionais', description: 'Através da receita criada é possivel gerar o pdf da tabela nutricional.', icon: FaUtensils },
+        { name: 'Gerenciamento de Ingredientes', description: 'Criar, editar e apagar ingredientes para utilizar nas receitas.', icon: FaClipboardList },
         { name: 'Customização de Perfil', description: 'Permite ao usuário personalizar seu perfil.', icon: FaUserEdit },
         { name: 'Geração de PDF', description: 'Gerar um PDF com os detalhes da tabela nutricional.', icon: FaFilePdf },
         { name: 'Suporte a PWA', description: 'O sistema é compatível com Progressive Web App.', icon: FaMobileAlt },
@@ -144,13 +144,13 @@ export default function ProjectDetails() {
             </div>
 
             <div className={styles.sectionAboutProjectTextContainer} >
-                <div className={styles.sectionAboutProjectTextContent} >
+                {/* <div className={styles.sectionAboutProjectTextContent} > */}
                         <Stepper 
                             tools={project.features}
-                            title='Sobre o projeto:'
+                            title='Sobre o projeto'
                             isFeature={true}
                         />
-                </div>
+                {/* </div> */}
             </div>
 
             <div className={styles.sectionAboutProjectContainer}>
