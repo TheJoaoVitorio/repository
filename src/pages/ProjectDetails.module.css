@@ -123,6 +123,7 @@
     flex-wrap: wrap;
     gap: 12px;
     height: 100%;
+    padding-top: 30px;
 }
 
 .sectionAboutProjectContent{
@@ -145,10 +146,20 @@
     border-radius: 10px;
     width: 200px;
     /* height: 420px; */
-    
     /* position: absolute; */
 }
 
+.sectionAboutProjectTextContainer{
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.sectionAboutProjectTextContent{
+    border: 2px solid red;
+    width: 100%;
+}
 
 @media (max-width:834px){
     .sectionAboutProjectContainer{

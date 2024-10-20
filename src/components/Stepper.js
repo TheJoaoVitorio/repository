@@ -1,72 +1,30 @@
 import React from 'react';
-import { SiDelphi, SiDbeaver, SiNotion } from "react-icons/si";
-import { VscVscode } from "react-icons/vsc";
-import { BiLogoPostgresql } from "react-icons/bi";
-import { FaPhoenixSquadron, FaGitAlt,FaFigma  } from "react-icons/fa";
 
-
-const tools = [
-  {
-    icon: <FaFigma  size={24} />,
-    name: "Figma",
-    description: "Design de interface e prototipagem."
-  },
-  {
-    icon: <SiNotion size={24} />,
-    name: "Notion",
-    description: "Plataforma multifuncional para organização de projetos, gestão de tarefas e documentação colaborativa."
-  },
-  {
-    icon: <FaGitAlt size={24} />,
-    name: "Git",
-    description: "Controle de versão e colaboração."
-  },
-  {
-    icon: <SiDelphi size={24} />,
-    name: "Delphi 11.3",
-    description: "IDE para desenvolvimento rápido de aplicativos nativos multiplataforma, especializada em Windows e com suporte estendido para mobile."
-  },
-  {
-    icon: <VscVscode size={24} />,
-    name: "VS Code",
-    description: "Ambiente de desenvolvimento integrado."
-  },
-  {
-    icon: <SiDbeaver size={24} />,
-    name: "DBeaver",
-    description: "Gerenciamento e visualização de banco de dados."
-  },
-  {
-    icon: <BiLogoPostgresql size={24} />,
-    name: "PostgreSQL",
-    description: "Banco de dados relacional robusto, utilizado para armazenamento de dados e consultas complexas em projetos de diferentes tamanhos."
-  },
-  {
-    icon: <FaPhoenixSquadron size={24} />,
-    name: "Firebird",
-    description: "Banco de dados leve e eficiente, ideal para aplicações embarcadas e sistemas que exigem alta performance e baixo consumo de recursos."
-  }
-  
-];
-
-const Stepper = () => {
+const Stepper = ({ tools = [], title = 'Ferramentas', isFeature = false }) => {
   return (
     <div className='stepperContainer'>
-      <div className='stepperHeader' >
-          <h1>Ferramentas</h1>
+      <div className='stepperHeader'>
+        <h1>{title}</h1>
       </div>
 
       <div className="stepper">
-        {tools.map((tool, index) => (
-          <div key={index} className="stepper-item">
-            <div className="stepper-icon">{tool.icon}</div>
-            <div className="stepper-content">
-              <h3>{tool.name}</h3>
-              <p>{tool.description}</p>
+        {tools.map((tool, index) => {
+          const name = isFeature ? tool.name : tool.name;
+          const description = isFeature ? tool.description : tool.description;
+
+          return (
+            <div key={index} className="stepper-item">
+              <div className="stepper-icon">
+                {isFeature ? <tool.icon className="iconStyle" /> : tool.icon}
+              </div>
+              <div className="stepper-content">
+                <h3>{name}</h3>
+                <p>{description}</p>
+              </div>
+              {index < tools.length - 1 && <div className="stepper-line"></div>}
             </div>
-            {index < tools.length - 1 && <div className="stepper-line"></div>}
-          </div>
-        ))}
+          );
+        })}
       </div>
       <style jsx>{`
         .stepperContainer {
@@ -81,7 +39,7 @@ const Stepper = () => {
         }
         .stepperHeader {
           width: 300px;
-          font-size: 20px;
+          font-size: clamp(10px, 15px, 20px);
           text-align: center;
           margin-bottom: 10px;
         }
@@ -93,8 +51,6 @@ const Stepper = () => {
           position: relative;
           padding-top: 20px;
           animation: appear linear;
-          animation-timeline : view();
-          animation-range:entry 0;
         }
         .stepper-item {
           display: flex;
@@ -115,14 +71,14 @@ const Stepper = () => {
           background: rgba(15, 16, 16, 0.8);
           backdrop-filter: blur(10px);
           box-shadow: rgb(22, 22, 22) 0px 6px 24px 0px, rgba(28, 28, 28, 0.892) 0px 0px 0px 1px;
-          transition: transform 0.3s ease-in-out; /* Transição suave para o zoom */
+          transition: transform 0.3s ease-in-out;
         }
         .stepper-icon:hover {
-          transform: scale(1.2); /* Efeito de zoom */
+          transform: scale(1.2);
         }
         .stepper-icon:hover svg {
-          transform: rotate(360deg); /* Rotação do ícone */
-          transition: transform 0.3s ease-in-out; /* Transição suave para a rotação */
+          transform: rotate(360deg);
+          transition: transform 0.3s ease-in-out;
         }
         .stepper-content {
           margin-left: 20px;
@@ -139,7 +95,6 @@ const Stepper = () => {
           margin: 0;
           word-wrap: break-word;
           overflow-wrap: break-word;
-          text-wrap: balance;
         }
         .stepper-line {
           position: absolute;
@@ -156,27 +111,20 @@ const Stepper = () => {
         .stepper-item:last-child .stepper-line {
           display: none;
         }
-
-        @keyframes appear{
-            from{
-                    opacity :0;
-                    scale: 0.8;
-            } to {
-                    opacity:1;
-                    scale:1;
-            }
+        @keyframes appear {
+          from {
+            opacity: 0;
+            scale: 0.8;
+          }
+          to {
+            opacity: 1;
+            scale: 1;
+          }
         }
-
-        /* .block{
-            animation: appear linear;
-            animation-timeline : view();
-            animation-range:entry 0;
-        } */
-
-        @media (min-width:700px) {
-            .stepper-content p {
-                width: 300px;
-            }
+        @media (min-width: 700px) {
+          .stepper-content p {
+            width: 300px;
+          }
         }
       `}</style>
     </div>

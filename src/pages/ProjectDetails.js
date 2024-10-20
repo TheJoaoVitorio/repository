@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styles from '../pages/ProjectDetails.module.css';
+
 import wlnDesktop from '../imgProjects/WLNutrion_LandingPage.png';
 import wlnLogin from '../imgProjects/WLN-LoginMobile.png';
 import wlnHome from '../imgProjects/WLN-HomeMobile.png';
@@ -13,43 +14,54 @@ import wlnGerenciarConta from '../imgProjects/WLN-GerenciarContaMobile.png';
 
 import { IoHeart } from 'react-icons/io5';
 import { FaEye } from 'react-icons/fa';
+import { FaUserLock, FaUtensils, FaClipboardList, FaUserEdit, FaFilePdf, FaMobileAlt, FaEnvelope } from 'react-icons/fa';
 import { BiLogoJavascript, BiLogoDjango } from 'react-icons/bi';
 import axios from 'axios';
+import Stepper from '../components/Stepper';
 
 const projects = [
     {
-        id: 1,
-        title: 'WLNutrion',
-        description: 'WLNutrion é um sistema web que permite a pequenos produtores de alimentos gerar tabelas nutricionais para seus produtos.',
-        images: [
-            wlnDesktop,
-            wlnLogin,
-            wlnHome,
-            wlnReceitas,
-            wlnCriandoReceitas,
-            wlnCriandoIngredientes,
-            wlnCriandoReceitaPDF,
-            wlnContateNos,
-            wlnGerenciarConta
-        ],
-        languages: {
-            'Django': {
-                icon: BiLogoDjango,
-                style: 'badgeStyleDjango'
-            },
-            'JavaScript': {
-                icon: BiLogoJavascript,
-                style: 'styleJavascript'
-            }
+      id: 1,
+      title: 'WLNutrion',
+      description: 'WLNutrion é um sistema web que permite a pequenos produtores de alimentos gerar tabelas nutricionais para seus produtos.',
+      images: [
+        wlnDesktop,
+        wlnLogin,
+        wlnHome,
+        wlnReceitas,
+        wlnCriandoReceitas,
+        wlnCriandoIngredientes,
+        wlnCriandoReceitaPDF,
+        wlnContateNos,
+        wlnGerenciarConta
+      ],
+      languages: {
+        'Django': {
+          icon: BiLogoDjango,
+          style: 'badgeStyleDjango'
+        },
+        'JavaScript': {
+          icon: BiLogoJavascript,
+          style: 'styleJavascript'
         }
+      },
+      features: [
+        { name: 'Autenticação de Usuário', description: 'O sistema possui autenticação de usuários para segurança.', icon: FaUserLock },
+        { name: 'Gerar Tabelas Nutricionais', description: 'Permite a criação e edição de receitas e suas tabelas nutricionais.', icon: FaUtensils },
+        { name: 'Gerenciamento de Ingredientes', description: 'Criar, editar e apagar ingredientes para as receitas.', icon: FaClipboardList },
+        { name: 'Customização de Perfil', description: 'Permite ao usuário personalizar seu perfil.', icon: FaUserEdit },
+        { name: 'Geração de PDF', description: 'Gerar um PDF com os detalhes da tabela nutricional.', icon: FaFilePdf },
+        { name: 'Suporte a PWA', description: 'O sistema é compatível com Progressive Web App.', icon: FaMobileAlt },
+        { name: 'Envio de Email', description: 'Envio de emails utilizando protocolo SMTP.', icon: FaEnvelope }
+      ]
     },
     {
-        id: 2,
-        title: 'Outro Projeto',
-        description: 'Descrição completa de outro projeto.',
-        images: []
+      id: 2,
+      title: 'Outro Projeto',
+      description: 'Descrição completa de outro projeto.',
+      images: []
     }
-];
+  ];
 
 export default function ProjectDetails() {
     const { id } = useParams();
@@ -128,6 +140,16 @@ export default function ProjectDetails() {
                             <FaEye /> {views}
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div className={styles.sectionAboutProjectTextContainer} >
+                <div className={styles.sectionAboutProjectTextContent} >
+                        <Stepper 
+                            tools={project.features}
+                            title='Sobre o projeto:'
+                            isFeature={true}
+                        />
                 </div>
             </div>
 
