@@ -110,7 +110,46 @@
     align-items: center;
 }
 
-/* Responsividade para telas menores (mobile) */
+.sectionAboutProjectContainer{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    height: 100%;
+}
+
+.sectionAboutProjectContent{
+    /* border: 2px solid wheat; */
+    background: rgba(15, 16, 16, 0.8); 
+    backdrop-filter: blur(10px); 
+    box-shadow: rgb(22, 22, 22) 0px 6px 24px 0px, rgba(28, 28, 28, 0.892) 0px 0px 0px 1px;
+    border-radius: 40px;
+    width: 225px;
+    height: 450px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* opacity: 0.9; */
+}
+
+.sectionAboutProjectImage img{
+    /* border: 2px solid red; */
+    border-radius: 10px;
+    width: 200px;
+    /* height: 420px; */
+    
+    /* position: absolute; */
+}
+
+
+@media (max-width:834px){
+    .sectionAboutProjectContainer{
+        justify-content: center;
+    }
+}
+
 @media (max-width: 768px) {
     .badgeDetailsLanguages {
         font-size: 0; /* Ocultar o texto */

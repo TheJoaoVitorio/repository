@@ -25,7 +25,9 @@ export default function Header() {
         <header className={`${styles.header} ${styles.headerTextColor}`}>
             <div className={styles.headerContent}>
                 <div className={styles.text1Em}>
-                    João Vitório
+                    <a href='/' >
+                        João Vitório
+                    </a>
                 </div>
                 <div className={styles.headerIcons}>
                     <a href='https://www.linkedin.com/in/jo%C3%A3o-vit%C3%B3rio/' className={`${styles.icon} ${styles.headerTextColor}`}>

@@ -52,6 +52,11 @@
     letter-spacing: 1.5px;
 }
 
+.text1Em a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
 .icon {
     width: 28px;
     height: 28px;

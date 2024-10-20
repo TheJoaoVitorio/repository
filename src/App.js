@@ -12,7 +12,7 @@ import ProjectDetails from './pages/ProjectDetails';
      <Router>
        <div className="App">
          <Header></Header>
-         <Routes>
+          <Routes>
             <Route path='/' element={<Home />} ></Route> 
             <Route path="/projetos/:id" element={<ProjectDetails />} />           
           </Routes>
