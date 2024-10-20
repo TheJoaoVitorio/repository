@@ -1,4 +1,3 @@
-// ProjectDetails.js
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styles from '../pages/ProjectDetails.module.css';
@@ -56,14 +55,15 @@ export default function ProjectDetails() {
     const { id } = useParams();
     const project = projects.find((project) => project.id === parseInt(id));
 
-    // Estado para likes e visualizações
+    
     const [likes, setLikes] = useState(0);
     const [views, setViews] = useState(0);
+    const [liked, setLiked] = useState(false);
 
     useEffect(() => {
         if (!project) return;
+
         
-        // Carregar os dados iniciais (likes e visualizações)
         const fetchProjectData = async () => {
             try {
                 const response = await axios.get(`/projetos/${project.id}`);
@@ -77,13 +77,23 @@ export default function ProjectDetails() {
             }
         };
 
+        
+        const isLiked = localStorage.getItem(`projeto_${project.id}_liked`);
+        setLiked(isLiked === 'true');
+
         fetchProjectData();
     }, [project]);
 
-    const handleLike = async () => {
+    const handleLike = () => {
+        
+        if (liked) return;
+
         try {
-            await axios.post(`/projetos/${project.id}/like`);
+            axios.post(`/projetos/${project.id}/like`);
             setLikes(prevLikes => prevLikes + 1);
+            setLiked(true);
+
+            localStorage.setItem(`projeto_${project.id}_liked`, 'true');
         } catch (error) {
             console.error('Erro ao incrementar os likes:', error);
         }
@@ -111,8 +121,8 @@ export default function ProjectDetails() {
                         ))}
                     </div>
                     <div className={styles.sectionDetailsApresentationReactions}>
-                        <div className={styles.sectionDetailsApresentationLikes} onClick={handleLike}>
-                            <IoHeart className={styles.iconLike} /> {likes}
+                        <div className={`${styles.sectionDetailsApresentationLikes} ${liked ? styles.liked : ''}`} onClick={handleLike}>
+                            <IoHeart className={`${styles.iconLike} ${liked ? styles.liked : ''}`} /> {likes}
                         </div>
                         <div className={styles.sectionDetailsApresentationViews}>
                             <FaEye /> {views}

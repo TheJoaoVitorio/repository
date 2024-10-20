@@ -80,9 +80,15 @@
     /* border: 2px solid red; */
     font-size: 14px;
 }
+
 .iconStyle {
     font-size: 14px; /* Tamanho do ícone */
 }
+
+.iconLike.liked {
+    color: #3b82f6;
+}
+
 .iconLike:hover{
     color: #3b82f6;
     cursor: pointer;
