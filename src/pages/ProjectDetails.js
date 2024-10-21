@@ -26,6 +26,7 @@ import { BiLogoJavascript, BiLogoDjango,BiLogoPython } from 'react-icons/bi';
 import { SiBootstrap } from "react-icons/si";
 import axios from 'axios';
 import Stepper from '../components/Stepper';
+import BtnBackToTop from '../components/BtnBackToTop';
 
 const projects = [
     {
@@ -191,6 +192,9 @@ export default function ProjectDetails() {
                     </div>
                 ))}
             </div>
+            <BtnBackToTop/>
         </div>
+        
     );
+    
 }
