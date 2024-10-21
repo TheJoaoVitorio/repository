@@ -1,8 +1,8 @@
 import styles from '../components/Footer.module.css'
-import { FaGithub, FaReact } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import Lottie from 'lottie-react'; 
 import LottieReactIcon from '../lotties/Animation - 1729298523997.json'
-import { style } from 'framer-motion/client';
+
 
 
 export default function Footer(){

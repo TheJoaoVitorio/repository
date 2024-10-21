@@ -10,6 +10,7 @@ import { VscVscode } from "react-icons/vsc";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FaPhoenixSquadron, FaGitAlt,FaFigma  } from "react-icons/fa";
 import VerticalStepper from '../components/Stepper';
+import BtnBackToTop from '../components/BtnBackToTop';
 
 
 export default function Home(){
@@ -67,6 +68,7 @@ export default function Home(){
             <VerticalStepper
                 tools={tools} title="Ferramentas"
              />
+            <BtnBackToTop/>
         </div>
     )
 }
