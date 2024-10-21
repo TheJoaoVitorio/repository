@@ -1,9 +1,9 @@
 import styles from '../components/Card.module.css';
-import gifDesktopProjeto1 from '../gifProjects/Wlnutrion.gif';
-import gifMobileProjeto1 from '../gifProjects/WLN-mobile2.gif';
+import gifDesktopWLNutrion from '../gifProjects/Wlnutrion.gif';
+import gifMobileWLNutrion from '../gifProjects/WLN-mobile2.gif';
 
-import gifDesktopProjeto2 from '../gifProjects/day_519.png';
-import gifMobileProjeto2 from '../gifProjects/day_519.png';
+import gifDesktopCars from '../gifProjects/cars.gif';
+import gifMobileCars from '../gifProjects/carsMobile.gif';
 
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -15,15 +15,15 @@ import 'animate.css/animate.min.css';
 const projects = [
     {
         id: 1,
-        gifDesktop: gifDesktopProjeto1,
-        gifMobile: gifMobileProjeto1,
+        gifDesktop: gifDesktopWLNutrion,
+        gifMobile: gifMobileWLNutrion,
         title: 'Wlnutrion'
     },
     {
         id: 2,
-        gifDesktop: gifDesktopProjeto2,
-        gifMobile: gifMobileProjeto2,
-        title: 'Outro Projeto'
+        gifDesktop: gifDesktopCars,
+        gifMobile: gifMobileCars,
+        title: 'Cars'
     },
 ];
 

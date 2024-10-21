@@ -12,10 +12,18 @@ import wlnCriandoReceitaPDF from '../imgProjects/WLN-CriandoReceitaPDFMobile.png
 import wlnContateNos from '../imgProjects/WLN-ContateNosMobile.png';
 import wlnGerenciarConta from '../imgProjects/WLN-GerenciarContaMobile.png';
 
+import carsDesktop from '../imgProjects/cars/carsDesktop.png'
+import carsWhite from '../imgProjects/cars/carsWhite.png'
+import carsWhiteModal from '../imgProjects/cars/carsWhiteModal.png'
+import carsDark from '../imgProjects/cars/carsDark.png'
+import carsDarkModal from '../imgProjects/cars/carsDarkModal.png'
+
+
 import { IoHeart } from 'react-icons/io5';
 import { FaEye } from 'react-icons/fa';
 import { FaUserLock, FaUtensils, FaClipboardList, FaUserEdit, FaFilePdf, FaMobileAlt, FaEnvelope } from 'react-icons/fa';
-import { BiLogoJavascript, BiLogoDjango } from 'react-icons/bi';
+import { BiLogoJavascript, BiLogoDjango,BiLogoPython } from 'react-icons/bi';
+import { SiBootstrap } from "react-icons/si";
 import axios from 'axios';
 import Stepper from '../components/Stepper';
 
@@ -43,6 +51,10 @@ const projects = [
         'JavaScript': {
           icon: BiLogoJavascript,
           style: 'styleJavascript'
+        },
+        'Python':{
+            icon : BiLogoPython,
+            style:'stylePython'
         }
       },
       features: [
@@ -57,9 +69,26 @@ const projects = [
     },
     {
       id: 2,
-      title: 'Outro Projeto',
-      description: 'Descrição completa de outro projeto.',
-      images: []
+      title: 'Cars',
+      description: 'Esse foi um dos meus primeiros projetos, no qual comecei a aprender JavaScript e Bootstrap.',
+      images: [
+        carsDesktop,
+        carsDark,
+        carsDarkModal,
+        carsWhite,
+        carsWhiteModal
+      ],
+      languages : {
+        'JavaScript': {
+            icon: BiLogoJavascript,
+            style: 'styleJavascript'
+        },
+        'Bootstrap':{
+            icon: SiBootstrap,
+            style:'styleBootstrap'
+        }
+      },
+    //   features : [{}]
     }
   ];
 

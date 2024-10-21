@@ -7,40 +7,22 @@ export default function SectionAboutMe(){
     
             <div className="SectionAboutMeContent">
                 <div className="SectionAboutMeText" >
-                    <p> Atualmente trabalho com <span className="DelphiColor" >Delphi</span> em uma empresa especializada em automação comercial. 
-                        Minha trajetória na programação começou com <span className="PythonColor" >Python</span>, onde desenvolvi projetos utilizando o framework  
-                        <span className="DjangoColor" > Django</span>.<br></br> <br></br>
-                        Nesses projetos, usei <span className="JSColor" >JavaScript</span> para auxiliar na criação de APIs e enriquecer as funcionalidades do sistema. 
-                        Hoje, com <span className="DelphiColor" >Delphi</span>, atuo na conversão de dados para sistemas ERP, realizando consultas <span className="SQLColor" >SQL</span> e integrando diferentes bases de dados para garantir 
+                    <p> Atualmente trabalho com <span className="BlueColor" >Delphi</span> em uma empresa especializada em automação comercial. 
+                        Minha trajetória na programação começou com <span className="BlueColor" >Python</span>, onde desenvolvi projetos utilizando o framework  
+                        <span className="BlueColor" > Django</span>.<br></br> <br></br>
+                        Nesses projetos, usei <span className="BlueColor" >JavaScript</span> para auxiliar na criação de APIs e enriquecer as funcionalidades do sistema. 
+                        Hoje, com <span className="BlueColor" >Delphi</span>, atuo na conversão de dados para sistemas ERP, realizando consultas <span className="BlueColor" >SQL</span> e integrando diferentes bases de dados para garantir 
                         a migração eficiente e precisa das informações.                       
                     </p>
                 </div>
             </div>
             <style jsx>{`
-                .DelphiColor {
-                    color: #c52828;
-                    font-weight:600;
-                }
-
-                .PythonColor {
+                
+                .BlueColor {
                     color: #1DA1F2;
                     font-weight:600;
                 }
 
-                .DjangoColor {
-                    color: #467c6b;
-                    font-weight:600;
-                }
-
-                .JSColor {
-                    color: #F7DF1E;
-                    font-weight:600;
-                }
-
-                .SQLColor {
-                    color: #E38B06;
-                    font-weight:600;
-                }
                 .SectionAboutMeContainer{
                     // border: 2px solid red;
                     margin: 0 auto;
