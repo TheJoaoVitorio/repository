@@ -1,7 +1,7 @@
 .CookiesContainer{
     /* border: 2px solid red; */
     margin: 0 auto;
-    width: 70%;
+    /* width: 70%; */
     position: fixed;
     bottom: 0;
     left: 0;
@@ -10,6 +10,7 @@
     justify-content: center;
     align-items: center;
     z-index: 9999;
+    padding-bottom: 20px;
 }
 
 .CookiesContent{
