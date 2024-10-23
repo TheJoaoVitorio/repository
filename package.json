@@ -27,14 +27,14 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "backend": "nodemon ./src/backend/server.js",
-    "dev": "concurrently \"npm run backend\"  ",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+ "scripts": {
+  "start": "react-scripts start",
+  "backend": "nodemon ./src/backend/server.js",
+  "dev": "concurrently \"npm run backend\" \"npm start\"",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
+},
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -53,6 +53,7 @@
       "last 1 safari version"
     ]
   },
+  "proxy": "http://localhost:5000",
   "devDependencies": {
     "concurrently": "^9.0.1"
   }

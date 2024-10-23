@@ -113,7 +113,7 @@ export default function ProjectDetails() {
                 setViews(response.data.views);
 
                 await axios.post(`/projetos/${project.id}/view`);
-                setViews(prevViews => prevViews + 1);
+                setViews(prevViews => prevViews);
             } catch (error) {
                 console.error('Erro ao carregar os dados do projeto:', error);
             }
@@ -131,7 +131,7 @@ export default function ProjectDetails() {
         if (liked) return;
 
         try {
-            axios.post(`/projetos/${project.id}/like`);
+            axios.post(`/projetos/${project.id}/like`);  //projeto/1/like
             setLikes(prevLikes => prevLikes + 1);
             setLiked(true);
 

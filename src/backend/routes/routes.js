@@ -9,7 +9,7 @@ prisma.$connect()
 
 
 // GET - Buscar projeto por ID e Contabiliza a view;
-routes.get('/projeto/:id', async (req, res) => {
+routes.get('/projetos/:id', async (req, res) => {
     try {
         const { id } = req.params;
         const intId = parseInt(id);
@@ -67,7 +67,7 @@ routes.post("/createproject", async (req, res) => {
 
 
 // POST - Like Projeto
-routes.post("/projeto/:id/like", async (req, res) => {
+routes.post("/projetos/:id/like", async (req, res) => {
     const { id } = req.params;
     const intId = parseInt(id);
 
