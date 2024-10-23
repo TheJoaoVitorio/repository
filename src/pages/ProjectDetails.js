@@ -11,6 +11,7 @@ import wlnCriandoIngredientes from '../imgProjects/WLN-CriandoIngredienteMobile.
 import wlnCriandoReceitaPDF from '../imgProjects/WLN-CriandoReceitaPDFMobile.png';
 import wlnContateNos from '../imgProjects/WLN-ContateNosMobile.png';
 import wlnGerenciarConta from '../imgProjects/WLN-GerenciarContaMobile.png';
+import wlnMobile from '../imgProjects/WLN-LandPageMobile.png'
 
 import carsDesktop from '../imgProjects/cars/carsDesktop.png'
 import carsWhite from '../imgProjects/cars/carsWhite.png'
@@ -34,7 +35,7 @@ const projects = [
       title: 'WLNutrion',
       description: 'WLNutrion é um sistema web que permite a pequenos produtores de alimentos gerar tabelas nutricionais para seus produtos.',
       images: [
-        wlnDesktop,
+        wlnDesktop, //0
         wlnLogin,
         wlnHome,
         wlnReceitas,
@@ -97,10 +98,48 @@ export default function ProjectDetails() {
     const { id } = useParams();
     const project = projects.find((project) => project.id === parseInt(id));
 
-    
+    const [windowSize, setWindowSize] = useState({
+        width: window.innerWidth,
+        height: window.innerHeight,
+    });
     const [likes, setLikes] = useState(0);
     const [views, setViews] = useState(0);
     const [liked, setLiked] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowSize({
+                width: window.innerWidth,
+                height: window.innerHeight,
+            });
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+
+    const [isMobile, setIsMobile] = useState(false);  
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowSize({
+                width: window.innerWidth,
+                height: window.innerHeight,
+            });
+            
+            setIsMobile(window.innerWidth < 385);
+        };
+
+        window.addEventListener('resize', handleResize);
+        handleResize();
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
 
     useEffect(() => {
         if (!project) return;
@@ -126,6 +165,7 @@ export default function ProjectDetails() {
         fetchProjectData();
     }, [project]);
 
+
     const handleLike = () => {
         
         if (liked) return;
@@ -143,14 +183,18 @@ export default function ProjectDetails() {
 
     if (!project) {
         return <p>Projeto não encontrado.</p>;
-    }
+    }    
 
     return (
         <div className={styles.ProjectDetailsContainer}>
             <h1>{project.title}</h1>
             <p>{project.description}</p>
             <div className={styles.ProjectDetailsImageApresentation}>
-                <img src={project.images[0]} alt="Projeto" />
+                {windowSize.width > 900 ?(
+                    <img src={project.images[0]} alt="Projeto" />
+                ) :(
+                    <img src={wlnMobile} alt="Projeto" />
+                )}
             </div>
             <div className={styles.sectionDetailsApresentation}>
                 <div className={styles.sectionDetailsApresentationContent}>
@@ -173,15 +217,16 @@ export default function ProjectDetails() {
                 </div>
             </div>
 
-            <div className={styles.sectionAboutProjectTextContainer} >
-                {/* <div className={styles.sectionAboutProjectTextContent} > */}
-                        <Stepper 
-                            tools={project.features}
-                            title='Sobre o projeto'
-                            isFeature={true}
-                        />
-                {/* </div> */}
+          
+            <div className={`${styles.sectionAboutProjectTextContainer} ${isMobile ? styles.mobileStyle : ''}`}
+            >
+                <Stepper 
+                    tools={project.features}
+                    title='Sobre o projeto'
+                    isFeature={true}
+                />
             </div>
+            
 
             <div className={styles.sectionAboutProjectContainer}>
                 {project.images.slice(1).map((image, index) => (

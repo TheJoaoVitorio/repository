@@ -6,7 +6,6 @@ const Stepper = ({ tools = [], title = 'Ferramentas', isFeature = false }) => {
       <div className='stepperHeader'>
         <h1>{title}</h1>
       </div>
-
       <div className="stepper">
         {tools.map((tool, index) => {
           const name = isFeature ? tool.name : tool.name;

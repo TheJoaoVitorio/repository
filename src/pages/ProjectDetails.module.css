@@ -186,11 +186,17 @@
     width: 100%;
 }
 
+.mobileStyle{
+    width: 100%;
+    border: 2px solid red;
+}
+
 @media(max-width: 1329px){
     .sectionAboutProjectContainer {
         grid-template-columns: repeat(3, 1fr); /* Uma coluna para telas menores */
     }
 }
+
 
 @media (max-width: 1024px) {
     .sectionAboutProjectContainer {
