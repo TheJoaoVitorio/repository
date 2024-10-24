@@ -31,7 +31,7 @@
     "ws": "^8.18.0"
   },
   "engines": {
-    "node": "14.x"
+    "node": "20.x"
   },
   "scripts": {
     "start": "react-scripts start",
