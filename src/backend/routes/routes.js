@@ -9,7 +9,7 @@ prisma.$connect()
 
 
 // GET - Buscar projeto por ID e Contabiliza a view;
-routes.get('/projetos/:id', async (req, res) => {
+routes.get('/projetos/:id/view', async (req, res) => {
     try {
         const { id } = req.params;
         const intId = parseInt(id);
@@ -26,16 +26,15 @@ routes.get('/projetos/:id', async (req, res) => {
             return res.status(404).json({ error: "Projeto não encontrado" });
         }
 
-        // Atualiza as views do projeto
+        // Atualiza as visualizações do projeto
         const updateViewsProject = await prisma.Project.update({
             where: { id: intId },
             data: {
                 views: projectExists.views + 1
             }
-        })
+        });
 
-        return res.status(200).json(projectExists);
-
+        return res.status(200).json(updateViewsProject);
     } catch (error) {
         return res.status(500).json({ error: "Erro interno do servidor" });
     }
