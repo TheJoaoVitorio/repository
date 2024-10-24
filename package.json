@@ -38,7 +38,6 @@
     "backend": "nodemon ./src/backend/server.js",
     "dev": "concurrently \"npm run backend\" \"npm start\"",
     "build": "npm install && react-scripts build",
-    "vercel-build": "prisma generate && prisma migrate deploy && next build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
