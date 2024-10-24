@@ -1,15 +1,13 @@
 {
-    "version" : 2,
-    "builds":[
-        {
-            "src":"src/backend/server.js",
-            "use":"@vercel/node"
-        }
+    "version": 2,
+    "builds": [
+      {
+        "src": "src/backend/server.js",
+        "use": "@vercel/node"
+      }
     ],
-    "routes":[
-        {
-            "src": "(.*)",
-            "dest": "src/backend/routes/routes.js"
-        }
-    ]
-}
+    "routes": [
+      { "src": "/[^.]+", "dest": "/", "status": 200 }
+    ],
+    "buildCommand": "npx prisma migrate dev --create-only && prisma migrate deploy && next build"
+  }  

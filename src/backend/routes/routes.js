@@ -4,7 +4,7 @@ const prisma = new PrismaClient();
 const routes = express.Router();
 
 prisma.$connect()
-  .then(() => console.log('Prisma conectado com sucesso'))
+  .then(() => console.log('Prisma conectado com sucesso!!!'))
   .catch(err => console.error('Erro ao conectar Prisma:', err));
 
 

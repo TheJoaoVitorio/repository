@@ -10,5 +10,8 @@ app.get("/teste", (req,res) =>{
     return res.json('Hello')
  })
 
+ app.use((req, res) => {
+  res.status(404).send('Página não encontrada');
+});
 
 app.listen(5000, () => console.log('Server up in 5000') );
