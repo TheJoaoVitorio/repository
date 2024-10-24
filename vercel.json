@@ -1,3 +1,25 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/backend/server.js", 
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/projetos/:id",
+      "methods": ["GET"],
+      "dest": "src/backend/server.js"
+    },
+    {
+      "src": "/projetos/:id/like",
+      "methods": ["POST"],
+      "dest": "src/backend/server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "src/backend/server.js"
+    }
+  ]
 }
